@@ -4,7 +4,7 @@
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage --watch --env=jsdom",
     "start": "webpack serve --open",
     "watch": "webpack --watch",
     "build": "webpack"
