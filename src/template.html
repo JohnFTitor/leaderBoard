@@ -7,28 +7,30 @@
   <title>Leader Board</title>
 </head>
 <body>
-  <main>
-    <h1> Leaderboard </h1>
-    <section class="flex-container">
-      <div id="leaderboard">
-        <div>
-          <h2>Recent Scores</h2>
-          <button>Refresh</button>
-        </div>   
-        <ul>
-          <li>The list is empty</li>
-        </ul>
+  <main class="flex-container">
+    <section class="flex-container baseline">
+      <h1> Leaderboard </h1>
+      <div class="flex-container leader-board">
+        <div id="leaderboard" class="score-table">
+          <div class="flex-container">
+            <h2>Recent Scores</h2>
+            <button>Refresh</button>
+          </div>   
+          <ul>
+            <li>The list is empty</li>
+          </ul>
+        </div>
+        <form class="flex-container baseline">
+          <h2> Add your Score </h2>
+          <label for="username">
+            <input id="username" placeholder="Your Name">
+          </label>
+          <label for="userscore">
+            <input id="userscore" placeholder="Your Score">
+          </label>
+          <button type="submit">Submit</button>
+        </form> 
       </div>
-      <form>
-        <h2> Add your Score </h2>
-        <label for="username">
-          <input id="username" placeholder="Your Name">
-        </label>
-        <label for="userscore">
-          <input id="userscore" placeholder="Your Score">
-        </label>
-        <button type="submit"></button>
-      </form> 
     </section>
   </main>
 </body>

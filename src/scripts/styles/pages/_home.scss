@@ -1,1 +1,50 @@
 // Home
+section {
+  width: 100%;
+  padding: 30px;
+}
+
+.leader-board{
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: baseline;
+  padding: 6rem 3rem;
+
+  form {
+    align-items: flex-end;
+
+    & > * {
+      margin-bottom: 2rem;
+    }
+
+    input,
+    label {
+      width: 100%;
+    }
+
+    input {
+      padding: 5px;
+    }
+
+  }
+}
+
+.score-table {
+  div {
+    padding-bottom: 3rem;
+  }
+
+  h2 {
+    margin-right: 2rem;
+  }
+
+  ul {
+
+    li {
+      font-size: 2rem;
+      width: 100%;
+      border: 1px solid black;
+      padding: 5px;
+    }
+  }
+}
