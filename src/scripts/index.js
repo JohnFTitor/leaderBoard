@@ -7,14 +7,14 @@ const username = document.querySelector('#username');
 const userscore = document.querySelector('#userscore');
 const refreshButton = document.querySelector('#refreshButton');
 
-function cleanSpan() {
+const cleanSpan = () => {
   const span = form.querySelector('span');
   if (span) {
     form.removeChild(span);
   }
-}
+};
 
-async function displayLeaders() {
+const displayLeaders = async () => {
   const leaderboard = document.querySelector('ul');
   const nodes = await refreshScores(id);
   if (nodes.length !== 0) {
@@ -23,7 +23,7 @@ async function displayLeaders() {
       leaderboard.appendChild(node);
     });
   }
-}
+};
 
 window.onload = async () => {
   if (!localStorage.getItem('idAPI')) {
