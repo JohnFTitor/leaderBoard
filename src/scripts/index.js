@@ -1,15 +1,27 @@
 import './styles/main.scss';
-import { createGame, createScore } from './modules/leaderboard.js';
+import { createGame, createScore, refreshScores } from './modules/leaderboard.js';
 
 let id = '';
 const form = document.querySelector('form');
 const username = document.querySelector('#username');
 const userscore = document.querySelector('#userscore');
+const refreshButton = document.querySelector('#refreshButton');
 
 function cleanSpan() {
   const span = form.querySelector('span');
   if (span) {
     form.removeChild(span);
+  }
+}
+
+async function displayLeaders() {
+  const leaderboard = document.querySelector('ul');
+  const nodes = await refreshScores(id);
+  if (nodes.length !== 0) {
+    leaderboard.innerHTML = '';
+    nodes.forEach((node) => {
+      leaderboard.appendChild(node);
+    });
   }
 }
 
@@ -19,6 +31,7 @@ window.onload = async () => {
     localStorage.setItem('idAPI', id);
   } else {
     id = localStorage.getItem('idAPI');
+    displayLeaders();
   }
 };
 
@@ -34,8 +47,12 @@ form.addEventListener('submit', (event) => {
       score: userscoreValue,
     };
     createScore(id, score);
+    username.value = '';
+    userscore.value = '';
   }
 });
 
 username.addEventListener('change', cleanSpan);
 userscore.addEventListener('change', cleanSpan);
+
+refreshButton.addEventListener('click', displayLeaders);

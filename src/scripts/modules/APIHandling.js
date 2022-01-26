@@ -3,7 +3,7 @@ const postGame = async () => {
   const result = await fetch(`${requestURL}/games`, {
     method: 'POST',
     body: JSON.stringify({
-      name: 'Game 1',
+      name: 'John Francis Titor Leader Board',
     }),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
@@ -26,4 +26,10 @@ const postScore = async (id, score) => {
   return result;
 };
 
-export { postGame, postScore };
+const getScore = async (id) => {
+  const requestURL = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${id}/scores`;
+  const result = await fetch(requestURL).then((response) => response.json());
+  return result;
+};
+
+export { postGame, postScore, getScore };

@@ -1,4 +1,4 @@
-import { postGame, postScore } from './APIHandling.js';
+import { postGame, postScore, getScore } from './APIHandling.js';
 
 const createGame = async () => {
   const namedId = await postGame();
@@ -16,4 +16,15 @@ const createScore = async (id, score) => {
   form.appendChild(span);
 };
 
-export { createGame, createScore };
+const refreshScores = async (id) => {
+  const data = await getScore(id);
+  const nodes = [];
+  data.result.forEach((leader) => {
+    const leaderCard = document.createElement('li');
+    leaderCard.textContent = `${leader.user}: ${leader.score}`;
+    nodes.push(leaderCard);
+  });
+  return nodes;
+};
+
+export { createGame, createScore, refreshScores };
