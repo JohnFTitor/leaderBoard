@@ -5,7 +5,11 @@ body {
 
 section {
   width: 100%;
-  padding: 30px;
+  padding: 3rem;
+
+  @include for-really-small-device {
+    padding: 1rem;
+  }
 }
 
 .leader-board {
@@ -15,7 +19,7 @@ section {
   padding: 6rem 3rem;
   border: 2px solid $color-text;
   border-radius: 10px;
-  margin-top: 80px;
+  margin-top: 8rem;
 
   form {
     align-items: flex-end;
@@ -27,6 +31,10 @@ section {
     input,
     label {
       width: 100%;
+
+      @include for-really-small-device {
+        width: 90%;
+      }
     }
 
     input {
@@ -44,6 +52,21 @@ section {
     input:hover {
       transform: scale(1.1);
     }
+  }
+
+  @include for-small-device {
+    flex-direction: column;
+    padding: 5rem 2rem;
+    margin-top: 40px;
+    align-items: center;
+
+    form {
+      margin-top: 30px;
+    }
+  }
+
+  @include for-really-small-device {
+    padding: 5rem 1rem;
   }
 }
 
@@ -75,6 +98,14 @@ section {
     li:nth-child(even) {
       background-color: $gray-background;
     }
+
+    @include for-small-device {
+      max-height: 40vh;
+    }
+  }
+
+  @include for-small-device {
+    width: 100%;
   }
 }
 
