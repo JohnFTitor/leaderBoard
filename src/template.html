@@ -4,8 +4,34 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Project</title>
+  <title>Leader Board</title>
 </head>
 <body>
+  <main class="flex-container">
+    <section class="flex-container baseline">
+      <h1> Leaderboard </h1>
+      <div class="flex-container leader-board">
+        <div id="leaderboard" class="score-table">
+          <div class="flex-container">
+            <h2>Recent Scores</h2>
+            <button id="refreshButton" type="button">Refresh</button>
+          </div>   
+          <ul>
+            <li>The leaderboard is empty</li>
+          </ul>
+        </div>
+        <form class="flex-container baseline">
+          <h2> Add your Score </h2>
+          <label for="username">
+            <input id="username" type="text" placeholder="Your Name" required>
+          </label>
+          <label for="userscore">
+            <input id="userscore" type="number" placeholder="Your Score" required>
+          </label>
+          <button type="submit">Submit</button>
+        </form> 
+      </div>
+    </section>
+  </main>
 </body>
 </html>

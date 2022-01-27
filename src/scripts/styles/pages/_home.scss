@@ -1,0 +1,95 @@
+// Home
+body {
+  background-color: rgba(0, 0, 32, 0.76);
+}
+
+section {
+  width: 100%;
+  padding: 30px;
+}
+
+.leader-board {
+  width: 100%;
+  justify-content: space-around;
+  align-items: baseline;
+  padding: 6rem 3rem;
+  border: 2px solid $color-text;
+  border-radius: 10px;
+  margin-top: 80px;
+
+  form {
+    align-items: flex-end;
+
+    & > * {
+      margin-bottom: 2rem;
+    }
+
+    input,
+    label {
+      width: 100%;
+    }
+
+    input {
+      padding: 10px;
+      border: none;
+      box-shadow: 5px 5px $orange-background;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    input:focus-visible {
+      outline: none;
+      transform: scale(1.1);
+    }
+
+    input:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.score-table {
+  width: 40%;
+
+  div {
+    padding-bottom: 3rem;
+  }
+
+  h2 {
+    margin-right: 2rem;
+  }
+
+  ul {
+    width: 100%;
+    max-height: 50vh;
+    overflow-y: auto;
+
+    li {
+      width: 100%;
+      padding: 20px 10px;
+      font-size: 2.5rem;
+      background-color: $white-background;
+      color: rgb(36, 36, 36);
+      font-weight: 500;
+    }
+
+    li:nth-child(even) {
+      background-color: $gray-background;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $color-text;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(116, 116, 116);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(87, 87, 87);
+}

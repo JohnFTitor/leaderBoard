@@ -1,29 +1,31 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Title
+# Leader Board: Hit the API!
 
-> Project headline description
+> This simple project aims to connect to an API to fetch score data and display it on a LeaderBoard box, as well as provide the tool to submit a new score.
 
 ![Preview](./preview.gif))
 
-Project Description
+How much did you score last time you played with friends? What about having a healthy but fun competition? Keep track of your points with the LeaderBoard!.
 
 ## Built With
 
-Tecnologies used
+- HTML/SCSS, JavaScript
+- WebPack, Jest
+- Visual Studio Code
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://johnftitor.github.io/leaderBoard/)
 
 
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
-- Clone this repository with git clone```https://github.com/username/projectname.git``` using your terminal or command line.
+- Clone this repository with git clone```https://github.com/JohnFTitor/leaderBoard.git``` using your terminal or command line.
 - Change to the project directory by entering : <br>
-```cd projectname``` in the terminal
+```cd leaderBoard``` in the terminal
 
 ### Prerequisites
 
