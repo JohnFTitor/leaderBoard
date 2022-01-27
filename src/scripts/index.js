@@ -52,7 +52,7 @@ form.addEventListener('submit', (event) => {
   }
 });
 
-username.addEventListener('change', cleanSpan);
-userscore.addEventListener('change', cleanSpan);
+username.addEventListener('click', cleanSpan);
+userscore.addEventListener('click', cleanSpan);
 
 refreshButton.addEventListener('click', displayLeaders);

@@ -48,7 +48,6 @@ section {
 }
 
 .score-table {
-
   width: 40%;
 
   div {
@@ -65,7 +64,6 @@ section {
     overflow-y: auto;
 
     li {
-      font-size: 2rem;
       width: 100%;
       padding: 20px 10px;
       font-size: 2.5rem;
@@ -77,7 +75,6 @@ section {
     li:nth-child(even) {
       background-color: $gray-background;
     }
-
   }
 }
 
@@ -92,6 +89,7 @@ section {
 ::-webkit-scrollbar-thumb {
   background-color: rgb(116, 116, 116);
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgb(87, 87, 87);
 }
