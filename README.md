@@ -16,7 +16,7 @@ How much did you score last time you played with friends? What about having a he
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://johnftitor.github.io/leaderBoard/)
 
 
 ## Getting Started
