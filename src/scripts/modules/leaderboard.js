@@ -18,6 +18,7 @@ const createScore = async (id, score) => {
 
 const refreshScores = async (id) => {
   const data = await getScore(id);
+  data.result = data.result.sort((userA, userB) => userB.score - userA.score);
   const nodes = [];
   data.result.forEach((leader) => {
     const leaderCard = document.createElement('li');
