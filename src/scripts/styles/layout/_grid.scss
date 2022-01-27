@@ -1,5 +1,9 @@
 body {
   overflow: hidden;
+
+  @include for-small-device {
+    overflow: auto;
+  }
 }
 
 .flex-container {

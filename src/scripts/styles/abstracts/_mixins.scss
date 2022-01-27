@@ -1,1 +1,8 @@
 // Mixins
+@mixin for-small-device {
+  @media screen and (max-width: 735px) { @content; }
+}
+
+@mixin for-really-small-device {
+  @media screen and (max-width: 390px) { @content; }
+}

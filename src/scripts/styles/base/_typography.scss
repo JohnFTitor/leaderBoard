@@ -4,10 +4,18 @@ html {
   font-size: 10px;
   font-family: 'Lato', sans-serif;
   color: $color-text;
+
+  @include for-really-small-device {
+    font-size: 8px;
+  }
 }
 
 h1 {
   font-size: 8rem;
+
+  @include for-small-device {
+    font-size: 5rem;
+  }
 }
 
 h2 {
